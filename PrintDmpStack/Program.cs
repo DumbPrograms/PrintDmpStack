@@ -46,15 +46,8 @@ try
     }
     else if (args[3] == "1")
     {
-#pragma warning disable CA1869 // Cache and reuse 'JsonSerializerOptions' instances
-        var options = new JsonSerializerOptions
-        {
-            TypeInfoResolver = DumpStackJsonSerializationContext.Default,
-            WriteIndented = true,
-        };
-#pragma warning restore CA1869 // Cache and reuse 'JsonSerializerOptions' instances
-
-        JsonSerializer.Serialize(stdOut, stack, options);
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        JsonSerializer.Serialize(stdOut, stack, new DumpStackJsonSerializationContext(options).DumpStackFrameArray);
     }
     else if (args[3] == "2")
     {
