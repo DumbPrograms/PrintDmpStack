@@ -16,7 +16,7 @@ This program needs at least 3 positional args, or use a `params.txt` file to spe
         This arg is directly passed to dbgeng.
   
     2. Symbol paths:
-        Semicolon-separated list of folders to the possible symbols (.pdb files) for the crashed application.
+        Semicolon-separated list of folders to the possible symbols for the crashed application.
         This arg is directly passed to dbgeng.
   
     3. Output format:
