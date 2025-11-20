@@ -76,7 +76,7 @@ sealed class DumpAnalyzer : IDisposable
 
             frame.ModuleBaseAddress = moduleBase;
 
-            string loadedImageName;
+            string? loadedImageName;
             try
             {
                 symbols.GetModuleNames(moduleIndex, moduleBase
@@ -91,7 +91,7 @@ sealed class DumpAnalyzer : IDisposable
             }
             catch (COMException)
             {
-                loadedImageName = $"<unknown_{moduleBase}>";
+                loadedImageName = null;
             }
 
             frame.ModuleName = String.IsNullOrWhiteSpace(loadedImageName) ? $"<unknown_{moduleBase}>" : loadedImageName;
