@@ -2,5 +2,6 @@
   <Folder Name="/Solution Items/">
     <File Path="Directory.Build.props" />
   </Folder>
+  <Project Path="DmpStack/DmpStack.csproj" Id="8546212c-cd1d-4019-8581-1d8f4da2c608" />
   <Project Path="PrintDmpStack/PrintDmpStack.csproj" Id="dd1a2b5f-ac13-477f-8497-ae97d22f9cae" />
 </Solution>

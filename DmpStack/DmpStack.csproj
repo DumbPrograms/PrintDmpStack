@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>DumbPrograms.DmpStack</PackageId>
+    <Version>1.0</Version>
+    <Authors>diryboy</Authors>
+    <Title>.dmp stack printer</Title>
+    <Description>A Windows program to print the stack from a crash dump (.dmp) file</Description>
+    <RepositoryUrl>https://github.com/DumbPrograms/PrintDmpStack</RepositoryUrl>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Pack="True" Include="README.md" PackagePath="/" />
+  </ItemGroup>
+
+</Project>
