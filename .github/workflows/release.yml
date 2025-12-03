@@ -27,6 +27,8 @@ jobs:
   release:
     runs-on: ubuntu-slim
     needs: [build]
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
     - name: Create or update Release for tag
       run: |
