@@ -26,7 +26,7 @@ jobs:
         path: artifacts/publish/PrintDmpStack/release_${{ matrix.rid }}
 
   release:
-    runs-on: linux-slim
+    runs-on: ubuntu-slim
     needs: [build]
     steps:
     - uses: actions/download-artifact@v5
