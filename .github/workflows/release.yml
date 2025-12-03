@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
+
   build:
     runs-on: windows-latest
     strategy:
@@ -23,3 +24,10 @@ jobs:
       with:
         name: binaries_${{ matrix.rid }}
         path: artifacts/publish/PrintDmpStack/release_${{ matrix.rid }}
+
+  release:
+    runs-on: linux-slim
+    needs: [build]
+    steps:
+    - uses: actions/download-artifact@v5
+    - run: ll  
