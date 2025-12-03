@@ -46,6 +46,15 @@ jobs:
             --draft
         fi
     - uses: actions/download-artifact@v5
-    - name: Upload artifacts to release
+    - name: Zip assets
       run: |
-        ls -R
+        for d in */; do
+          echo "Zipping $d"
+          zip "${d%/}.zip" $d
+        done
+    - name: Upload assets to release
+      run: |
+        for f in *.zip; do
+          echo "Uploading $f"
+          gh release upload ${GITHUB_REF_NAME} $f --clobber
+        done
