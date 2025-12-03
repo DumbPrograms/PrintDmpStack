@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-slim
+    runs-on: windows-latest
     strategy:
       matrix:
         rid: [win-x64, win-x86, win-arm64]
